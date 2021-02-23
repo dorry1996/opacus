@@ -309,10 +309,10 @@ class PrivacyEngine:
 #                 f"but received a batch of size {batch_size}"
 #             )
         # 自己添加一个可以查看 batch_size的代码 可以发现一个周期内的迭代次数就是样本数/batch_size
-        print(self.steps)
+#         print(self.steps)
 #         if batch_size > self.batch_size:
-        print('batch_size:',batch_size)
-        print('self.batch_size:',self.batch_size)
+#         print('batch_size:',batch_size)
+#         print('self.batch_size:',self.batch_size)
 
         if batch_size < self.batch_size:
             warnings.warn(
