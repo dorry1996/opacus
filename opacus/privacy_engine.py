@@ -302,12 +302,15 @@ class PrivacyEngine:
         self.steps += 1
         self.clipper.clip_and_accumulate()
         clip_values, batch_size = self.clipper.pre_step()
-
+#       注释掉这部分是因为batch_size的不匹配会引起报错，后续要仔细探讨privacy_accountant.
 #         if batch_size > self.batch_size:
 #             raise ValueError(
 #                 f"PrivacyEngine expected a batch of size {self.batch_size} "
 #                 f"but received a batch of size {batch_size}"
 #             )
+        # 自己添加一个可以查看 batch_size的代码
+        print('batch_size:',batch_size)
+        print('self.batch_size:',self.batch_size)
 
         if batch_size < self.batch_size:
             warnings.warn(
