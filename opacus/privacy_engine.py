@@ -309,6 +309,7 @@ class PrivacyEngine:
 #                 f"but received a batch of size {batch_size}"
 #             )
         # 自己添加一个可以查看 batch_size的代码
+        print(self.steps)
         print('batch_size:',batch_size)
         print('self.batch_size:',self.batch_size)
 
