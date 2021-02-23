@@ -303,11 +303,11 @@ class PrivacyEngine:
         self.clipper.clip_and_accumulate()
         clip_values, batch_size = self.clipper.pre_step()
 
-        if batch_size > self.batch_size:
-            raise ValueError(
-                f"PrivacyEngine expected a batch of size {self.batch_size} "
-                f"but received a batch of size {batch_size}"
-            )
+#         if batch_size > self.batch_size:
+#             raise ValueError(
+#                 f"PrivacyEngine expected a batch of size {self.batch_size} "
+#                 f"but received a batch of size {batch_size}"
+#             )
 
         if batch_size < self.batch_size:
             warnings.warn(
